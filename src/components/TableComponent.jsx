@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo, faEdit, faTrash, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const { SearchBar } = Search;
 const columns = [
@@ -78,6 +79,12 @@ const defaultSorted = [
   },
 ];
 
+const mapStateToProps = (state) => {
+  return { 
+    users: state.users.users,
+  };
+};
+
 const TableComponent = (props) => {
   return (
     <div>
@@ -117,4 +124,4 @@ const TableComponent = (props) => {
   );
 };
 
-export default TableComponent;
+export default connect(mapStateToProps, null)(TableComponent);

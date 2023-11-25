@@ -13,6 +13,13 @@ import {
   // DropdownItem,
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return { 
+    Title: state.users.title,
+  };
+};
 
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,4 +48,4 @@ const NavbarComponent = (props) => {
   );
 };
 
-export default NavbarComponent;
+export default connect(mapStateToProps, null) (NavbarComponent);
