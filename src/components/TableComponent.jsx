@@ -5,8 +5,9 @@ import ToolkitProvider, {
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 import { Container, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfo, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
-import paginationFactory from 'react-bootstrap-table2-paginator';
+import { faInfo, faEdit, faTrash, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import paginationFactory from "react-bootstrap-table2-paginator";
+import { Link } from "react-router-dom";
 
 const { SearchBar } = Search;
 const columns = [
@@ -47,17 +48,23 @@ const columns = [
     formatter: (rowContent, row) => {
       return (
         <div>
-          <Button color="dark" className="me-2">
-            <FontAwesomeIcon icon={faInfo} /> Detail
-          </Button>
+          <Link to={"detail/" + row.id}>
+            <Button color="dark" className="me-2">
+              <FontAwesomeIcon icon={faInfo} /> Detail
+            </Button>
+          </Link>
 
-          <Button color="dark" className="me-2">
-            <FontAwesomeIcon icon={faEdit} /> Edit
-          </Button>
+          <Link to={"edit/" + row.id}>
+            <Button color="dark" className="me-2">
+              <FontAwesomeIcon icon={faEdit} /> Edit
+            </Button>
+          </Link>
 
-          <Button color="dark" className="me-2">
-            <FontAwesomeIcon icon={faTrash} /> Delete
-          </Button>
+          <Link>
+            <Button color="dark" className="me-2">
+              <FontAwesomeIcon icon={faTrash} /> Delete
+            </Button>
+          </Link>
         </div>
       );
     },
@@ -78,24 +85,30 @@ const TableComponent = (props) => {
         <ToolkitProvider
           bootstrap4
           keyField="id"
-          data={props.Users}
+          data={props.users}
           columns={columns}
           defaultSorted={defaultSorted}
           search
-          
         >
           {(props) => (
             <div>
               <div className="row">
                 <div className="col">
-                  <h2>Data Calon Siswa</h2>
+                <Link to={"create"}>
+            <Button color="dark" className="me-2">
+              <FontAwesomeIcon icon={faUserPlus} /> Create
+            </Button>
+          </Link>
                 </div>
                 <div className="col-auto">
-                <SearchBar {...props.searchProps} placeholder="Search" />
+                  <SearchBar {...props.searchProps} placeholder="Search" />
                 </div>
               </div>
               <hr />
-              <BootstrapTable {...props.baseProps} pagination={ paginationFactory() }/>
+              <BootstrapTable
+                {...props.baseProps}
+                pagination={paginationFactory()}
+              />
             </div>
           )}
         </ToolkitProvider>
