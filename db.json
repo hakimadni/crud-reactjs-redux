@@ -1,0 +1,88 @@
+{
+    "users" : [
+        {
+          "id": 1,
+          "nama": "Hakim",
+          "alamat": "Bintaro",
+          "umur": 21,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 2,
+          "nama": "Hakim2",
+          "alamat": "Bintaro2",
+          "umur": 22,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 3,
+          "nama": "Hakim2",
+          "alamat": "Bintaro3",
+          "umur": 23,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 4,
+          "nama": "Hakim4",
+          "alamat": "Bintaro4",
+          "umur": 24,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 5,
+          "nama": "Hakim5",
+          "alamat": "Bintaro5",
+          "umur": 25,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 6,
+          "nama": "Hakim6",
+          "alamat": "Bintaro6",
+          "umur": 26,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 7,
+          "nama": "Hakim7",
+          "alamat": "Bintaro7",
+          "umur": 27,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 8,
+          "nama": "Hakim8",
+          "alamat": "Bintaro8",
+          "umur": 28,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 9,
+          "nama": "Hakim5",
+          "alamat": "Bintaro5",
+          "umur": 25,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 10,
+          "nama": "Hakim6",
+          "alamat": "Bintaro6",
+          "umur": 26,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 11,
+          "nama": "Hakim7",
+          "alamat": "Bintaro7",
+          "umur": 27,
+          "noHP": "082210339685"
+        },
+        {
+          "id": 12,
+          "nama": "Hakim8",
+          "alamat": "Bintaro8",
+          "umur": 28,
+          "noHP": "082210339685"
+        }
+      ]
+}
